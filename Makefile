@@ -42,7 +42,7 @@ SRCS = 	ft_fd_func/ft_putchar_fd.c		\
 		ft_str_func/ft_toupper.c		\
 		ft_str_func/ft_strncmp.c		\
 		ft_str_func/ft_strnstr.c		\
-		ft_str_func/ft_atoi.c		\
+		ft_str_func/ft_atoi.c			\
 		ft_free_func/free.c
 
 SRCSBONUS = ft_lst_func/ft_lstadd_back.c 	\
