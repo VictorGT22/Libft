@@ -6,11 +6,11 @@
 /*   By: victgonz <victgonz@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 12:10:34 by victgonz          #+#    #+#             */
-/*   Updated: 2023/01/31 16:02:21 by victgonz         ###   ########.fr       */
+/*   Updated: 2023/03/09 10:09:33 by victgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

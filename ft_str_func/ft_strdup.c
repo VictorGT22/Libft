@@ -6,11 +6,11 @@
 /*   By: victgonz <victgonz@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 10:37:49 by victgonz          #+#    #+#             */
-/*   Updated: 2023/01/31 15:51:14 by victgonz         ###   ########.fr       */
+/*   Updated: 2023/03/09 10:09:25 by victgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 char	*ft_strdup(char *str)
 {

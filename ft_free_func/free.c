@@ -6,11 +6,11 @@
 /*   By: victgonz <victgonz@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 10:32:40 by victgonz          #+#    #+#             */
-/*   Updated: 2023/01/31 16:00:10 by victgonz         ###   ########.fr       */
+/*   Updated: 2023/03/09 10:08:27 by victgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	free_arr(char **arr)
 {

@@ -6,7 +6,7 @@
 #    By: victgonz <victgonz@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/09 08:43:48 by victgonz          #+#    #+#              #
-#    Updated: 2023/02/09 08:43:50 by victgonz         ###   ########.fr        #
+#    Updated: 2023/03/09 10:29:12 by victgonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,43 +67,31 @@ SRCSBONUS = ft_lst_func/ft_lstadd_back.c 	\
 			ft_lst_func/ft_lstnew.c 		\
 			ft_lst_func/ft_lstsize.c
 
-OBJS = $(SRCS:.c=.o)
+OBJS 	= 	$(SRCS:.c=.o)
 
 OBJSBONUS = $(SRCSBONUS:.c=.o)
 
-INCLUDE = -I ./
-
-RM = rm -f
-
-DEPS = $(SRCS:.c=.d)
-
-DEPS_BONUS = $(SRCSBONUS:.c=.d)
-
+CFLAGS	+=	-Wall -Werror -Wextra
 %.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo "compiling: $<"
 
-	${CC} ${CFLAGS} -MMD $(INCLUDE) -c $< -o $@
+$(NAME):	$(OBJS)
+			ar rc $(NAME) $(OBJS)
 
-all: $(NAME)
-
-$(NAME): $(OBJS)
-
-	ar -rcs $(NAME) $(OBJS)
-
--include $(DEPS)
+all:		$(NAME)
 
 bonus: $(BONUS)
 
 $(BONUS) : $(OBJS) $(OBJSBONUS)
-
 	ar -rcs $(NAME) $(OBJS) $(OBJSBONUS)
 
--include $(DEPS_BONUS)
-
 clean:
-	$(RM) $(OBJS) $(OBJSBONUS) $(DEPS) $(DEPS_BONUS)
+			rm -f $(OBJS) $(OBJSBONUS)
 
-fclean: clean
-	$(RM) $(NAME)
+fclean:		clean
+			rm -f $(NAME)
 
-re: fclean all
-.PHONY: all bonus clean fclean re
+re:			all clean
+
+.PHONY:		all bonus clean fclean re
